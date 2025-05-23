@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #d5ffe2;
+  }
+  
+  .chat-container {
+    max-width: 800px;
+    margin: auto;
+    background: #a6f2c2;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .chat-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    color: #2f4f4f;
+  }
+  
+  .chat-box {
+    height: 400px;
+    overflow-y: scroll;
+    background: #caffdc;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .mensagem {
+    max-width: 60%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: white;
+    font-size: 0.95rem;
+  }
+  
+  .mensagem.paciente {
+    align-self: flex-start;
+    background: white;
+  }
+  
+  .mensagem.profissional {
+    align-self: flex-end;
+    background: #fff;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    background: #1fdd74;
+    border: none;
+    padding: 0 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .nome {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .profissional .nome {
+    color: red;
+  }
+  

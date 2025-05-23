@@ -1,0 +1,154 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-family: Droid Sans;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar .logo {
+  margin-left: 0;
+  display: inline-block; 
+  background-color: #CCB5FB; 
+  padding:0%; 
+  padding-left: 30px;
+  height: 61px;
+  
+}
+
+.botoes a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 7px;
+  font-size: 14px;
+  background-color: #d5b4f2;
+  color: #000;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.botoes .entrar {
+  background-color: #B28DFF;
+}
+
+.botoes .cadastrar {
+  background-color: #DAC8FE;
+}
+
+
+.Meio {
+  background-color: #DAC8FE;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.Meio h1 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #282E34;
+  font-family:'Berkshire Swash', cursive;
+
+}
+
+.Meio h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-family:'Berkshire Swash', cursive;
+  color: #282E34;
+}
+
+.saiba-mais {
+  background-color: #584977;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  font-family:'Berkshire Swash', cursive;
+  color: #ffff;
+}
+
+
+footer {
+  position: fixed;
+  background-color: #fff;
+  padding: 50px 40px;
+  position: relative;
+  font-family: Droid Sans;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.footer-box.direita {
+  margin-left: 40%;
+ 
+  
+}
+
+
+.footer-box h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #dabdfc;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+footer.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
