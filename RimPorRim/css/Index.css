@@ -32,17 +32,23 @@ body {
 }
 
 .nav-links a {
-  font-size: 25px;
-  padding-right: 15px;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
 
+.img_pessoa {
+
+  height: 15px;
+  width: 15px;
+}
 .navbar .logo {
   margin-left: 0;
   display: inline-block; 
-  background-color: #CCB5FB; 
+
   padding:5px; 
   height: 60px;
   width: 60px;
@@ -57,8 +63,7 @@ body {
 }
 
 .navbar h3{
-  font-size: 35px;
-  padding-right: 15px;
+  font-size: 25px;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -71,7 +76,7 @@ body {
   padding: 10px 20px;
   border-radius: 20px;
   margin-left: 7px;
-  font-size: 25px;
+  font-size: 15px;
   background-color: #d5b4f2;
   color: #000;
   font-weight: bold;
@@ -91,15 +96,12 @@ body {
   background: #DAC8FE;
   background: linear-gradient(180deg, rgba(218, 200, 254, 1) 80%, rgba(255, 255, 255, 1) 100%);
   width: 1920px;
-  height: 1000px;
-  text-align: left;
-  padding: 80px 20px;
-  padding-left: 10%;
+  height: 700px;
+  padding-right: 50% ;
 }
 
 .Meio h1 {
-  font-size: 200px;
-  text-align: left;
+  font-size: 150px;
   margin-bottom: 10px;
   color: #282E34;
   font-family:'Berkshire Swash', cursive;
@@ -107,8 +109,8 @@ body {
 }
 
 .Meio h2 {
-  font-size: 100px;
-  text-align: left;
+  font-size: 50px;
+  padding-left: 20px;
   margin-bottom: 30px;
   font-family:'Berkshire Swash', cursive;
   color: #282E34;
@@ -162,9 +164,9 @@ footer {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background-color: #dabdfc;
-  padding: 10px 12px;
-  border-radius: 50%;
+  background-color: #DAC8FE;
+  padding: 10px 10px;
+  border-radius: 25%;
   cursor: pointer;
 }
 
