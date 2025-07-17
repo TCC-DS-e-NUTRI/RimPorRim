@@ -1,0 +1,430 @@
+/* =====================================================
+   GERAL
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR (Todas as páginas)
+   ===================================================== */
+.navbar {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+}
+
+.navbar .logo {
+  margin-left: 0;
+  display: inline-block;
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+}
+
+.navbar .img_navbar {
+  width: 55px;
+  height: 50px;
+}
+
+.navbar h3 {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  font-family: Droid Sans;
+}
+
+.nav-links a {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.img_pessoa {
+  height: 15px;
+  width: 15px;
+}
+
+.botoes a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 7px;
+  font-size: 15px;
+  background-color: #d5b4f2;
+  color: #000;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.botoes .entrar {
+  background-color: #B28DFF;
+}
+
+.botoes .cadastrar {
+  background-color: #DAC8FE;
+}
+
+
+/* =====================================================
+   index.php — Página Inicial
+   ===================================================== */
+.Meio {
+  background: linear-gradient(180deg, rgba(218, 200, 254, 1) 80%, rgba(255, 255, 255, 1) 100%);
+  width: 1920px;
+  height: 700px;
+  padding-right: 50%;
+}
+
+.Meio h1 {
+  font-size: 150px;
+  margin-bottom: 10px;
+  color: #282E34;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.Meio h2 {
+  font-size: 50px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-family: 'Berkshire Swash', cursive;
+  color: #282E34;
+}
+
+.img_meio {
+  padding-top: 5%;
+  height: 200px;
+  width: 130px;
+}
+
+.saiba-mais {
+  background-color: #584977;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 50px;
+  width: 280px;
+  font-family: 'Berkshire Swash', cursive;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   escolha.php — Botões de Escolha de Usuário
+   ===================================================== */
+.btn_infantil {
+  background-color: white;
+  color: black;
+  border: 2px solid #FFCBC1;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.btn_infantil:hover {
+  background-color: #FFCBC1;
+  color: white;
+}
+
+.btn_adulto {
+  background-color: white;
+  color: black;
+  border: 2px solid #AFCBFF;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.btn_adulto:hover {
+  background-color: #AFCBFF;
+  color: white;
+}
+
+.btn_profissional {
+  background-color: white;
+  color: black;
+  border: 2px solid #ECD4FF;
+  height: 500px;
+  width: 300px;
+  border-radius: 30px;
+}
+
+.btn_profissional:hover {
+  background-color: #ECD4FF;
+  color: white;
+}
+
+
+/* =====================================================
+   footer (Todas as páginas)
+   ===================================================== */
+footer {
+  position: relative;
+  background-color: #fff;
+  padding: 50px 40px;
+  font-family: Droid Sans;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.footer-box.direita {
+  margin-left: 40%;
+}
+
+.footer-box h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #DAC8FE;
+  padding: 10px 10px;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+footer.hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   pagina_adultos.php
+   ===================================================== */
+.container-geral {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #dce8ff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar button {
+  background-color: #9ec4ff;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #6faaff;
+}
+
+.sidebar button.active {
+  background-color: #3f7ce6;
+  color: white;
+}
+
+.conteudo {
+  flex: 1;
+  background-color: #cce0ff;
+  padding: 30px;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.conteudo h2 {
+  width: 100%;
+  text-align: center;
+  color: #2f3851;
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: #f4f4f4;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.item img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   chat.php — Estilo do Chat
+   ===================================================== */
+.caixa-chat {
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+  margin: 40px auto;
+  background-color: #e5edff;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mensagem {
+  display: flex;
+  max-width: 70%;
+}
+
+.mensagem.direita {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.mensagem.esquerda {
+  align-self: flex-start;
+  justify-content: flex-start;
+}
+
+.conteudo-mensagem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mensagem.direita .conteudo-mensagem {
+  align-items: flex-end;
+}
+
+.nome {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.nome.profissional {
+  color: #d60000;
+}
+
+.bolha {
+  background-color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  word-break: break-word;
+}
+
+.mensagem.direita .bolha {
+  background-color: #cfe3ff;
+}
+
+.form-chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-chat input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.form-chat button {
+  background-color: #0047ab;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gAradient(180deg, #dce7fb 80%, #ffffff 100%);
+  min-height: calc(100vh - 60px);
+}
+
+.chat-titulo {
+  font-size: 40px;
+  font-family: 'Berkshire Swash', cursive;
+  margin-bottom: 20px;
+  color: #2f3851;
+  position: relative;
+}
+
+.chat-titulo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #2f3851;
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+}
