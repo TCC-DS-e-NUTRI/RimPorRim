@@ -44,14 +44,19 @@ $result = $conn->query($sql);
   <main class="chat-container">
     <h2 class="chat-titulo">CHAT</h2>
 
-    <div class="caixa-chat"  id="caixa-chat">
+    <div class="caixa-chat" id="caixa-chat">
       <?php while ($row = $result->fetch_assoc()): ?>
         <?php
           $sou_eu = ($row['nome'] === $_SESSION['usuario']['nome']);
           $classe_lado = $sou_eu ? 'direita' : 'esquerda';
-          $classe_profissional = ($row['tipo'] === 'Profissional') ? 'Profissional' : '';
+          $classe_profissional = (strtolower($row['tipo']) === 'profissional') ? 'profissional' : '';
+          $usuario_logado = $_SESSION['usuario'];
+          $pode_excluir = (
+            strtolower($usuario_logado['tipo']) === 'profissional' ||
+            $row['nome'] === $usuario_logado['nome']
+          );
         ?>
-        <div class="mensagem <?php echo $classe_lado; ?>">
+        <div class="mensagem <?php echo $classe_lado; ?>" data-hora="<?php echo $row['hora_mandada']; ?>">
           <div class="conteudo-mensagem">
             <p class="nome <?php echo $classe_profissional; ?>">
               <?php echo htmlspecialchars($row['nome']); ?>
@@ -59,6 +64,9 @@ $result = $conn->query($sql);
             <div class="bolha">
               <?php echo htmlspecialchars($row['mensagem']); ?>
             </div>
+            <?php if ($pode_excluir): ?>
+              <button class="btn-excluir" onclick="excluirMensagem('<?php echo $row['hora_mandada']; ?>')">Excluir</button>
+            <?php endif; ?>
           </div>
         </div>
       <?php endwhile; ?>
@@ -71,11 +79,38 @@ $result = $conn->query($sql);
       </button>
     </form>
   </main>
+
   <script>
+  
+  // Rolar para o final ao carregar
   window.addEventListener('load', function () {
     var chatBox = document.getElementById('caixa-chat');
     chatBox.scrollTop = chatBox.scrollHeight;
   });
-</script>
+
+  // Mostrar botão de excluir com clique direito (botão direito do mouse)
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.mensagem').forEach(msg => {
+      msg.addEventListener('contextmenu', (e) => {
+        e.preventDefault(); // impede o menu do navegador
+        document.querySelectorAll('.mensagem').forEach(m => {
+          if (m !== msg) m.classList.remove('show-delete');
+        });
+        msg.classList.toggle('show-delete');
+      });
+    });
+  });
+
+  // Função de exclusão
+  function excluirMensagem(horaMandada) {
+    if (confirm("Deseja realmente excluir esta mensagem?")) {
+      window.location.href = 'excluir_mensagem.php?hora=' + encodeURIComponent(horaMandada);
+    }
+  }
+
+
+
+
+  </script>
 </body>
 </html>
